@@ -1,0 +1,22 @@
+import pygame
+import os
+
+pygame.init()
+os.environ['SDL_VIDEO_WINDOW_POS'] = "100, 100"
+screen = pygame.display.set_mode((640, 480))
+pygame.display.set_caption("受折磨的小鸟")
+
+clock = pygame.time.Clock()
+
+# 创建背景色
+bg_color = pygame.Color("#000432")
+
+while True:
+    clock.tick(60)
+    # 绘制背景色
+    screen.fill(bg_color)
+
+    # 更新显示
+    pygame.display.update()
+
+pygame.quit()
